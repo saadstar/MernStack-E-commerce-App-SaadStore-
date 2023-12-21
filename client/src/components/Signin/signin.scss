@@ -1,0 +1,49 @@
+.signUp {
+    height: calc(100vh - 120px);
+    width: 100vw;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        h1 {
+
+        }
+        form {
+            .item {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                .label {
+                    font-weight: 500;
+                    font-size: 16px;
+                    padding: 20px;
+                }
+                input {
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid #000;
+                }
+                button {
+                    width: 60%;
+                    padding: 20px;
+                    border: none;
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 19px;
+                    margin-top: 50px;
+                    &:hover {
+                        background-color: rgba(220, 29, 131, 0.359);
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+@media only screen and (max-width:480px) {
+    button{
+        width: 60% !important;
+    }
+}

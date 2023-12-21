@@ -1,0 +1,35 @@
+.auth{
+    position: absolute;
+        right: 100px;
+        top: 90px;
+        z-index: 999;
+        background-color: white;
+        padding: 20px;
+        width: 11%;
+        .accountItem{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .authButton{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 20px;
+            &:hover{
+                background-color: rgba(245, 123, 135, 0.187);
+                font-size:19px;
+                font-weight: 500;
+                width: 80%;
+            }
+        }
+}
+@media only screen and (max-width:480px) {
+    .auth{
+        width: 60%;
+        position: absolute;
+        right: 0;
+    }
+}

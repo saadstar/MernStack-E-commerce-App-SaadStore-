@@ -1,0 +1,91 @@
+.navBar{
+    height: 120px;
+    position: sticky;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    .base-img__inner {
+            width: 100%;
+            height: 40%;
+        }
+    .wrapper{
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .item{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            img{
+                width: 50px;
+                height: 25px;
+            }
+            .saadstore{
+                font-weight: 600;
+                font-size: 21px;
+                letter-spacing: 2.5px;
+            }
+        }
+        .left{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .center{
+           font-size: 30px;
+           letter-spacing: 2px;
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            .icons{
+                display: flex;
+                cursor: pointer;
+                color: #777;
+                gap: 15px;
+                    .cartIcon{
+                        position: relative;
+                        span{
+                            position: absolute;
+                            top: -10px;
+                            right: -10px;
+                            font-size: 12px;
+                            width: 20px;
+                            height: 20px;
+                            background-color: #2879fe;
+                            color: white;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:480px){
+    .navBar{
+        width: 100%;
+        .base-img__inner{
+            object-fit: cover;
+        }
+        .wrapper{
+            display: flex;
+            .left{
+                display: none;
+            }
+            .right{
+                .item{
+                    display: none;
+                }
+            }
+        }
+    }
+}
