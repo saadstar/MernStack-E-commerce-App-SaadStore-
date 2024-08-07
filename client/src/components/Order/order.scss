@@ -1,0 +1,56 @@
+.order{
+    min-height: 50vh;
+    margin: 10px 20px;
+    h1{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    h4{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            font-size: 30px;
+            font-weight: bolder;
+    }
+    .orderContainer{
+        margin-top: 20px;
+            border: 1px solid #2879fe;
+            border-radius: 10px;
+            padding: 10px;
+            .oneOrder{
+                display: flex;
+                gap: 20px;
+                margin-bottom: 10px;
+                img{
+                    object-fit: contain;
+                    border: 1px solid #2879fe;
+                    padding: 3px;
+                    border-radius: 4px;
+                }
+                .content{
+                    width: 95%;
+                    .title_price{
+                        display: flex;
+                        justify-content: space-between;
+                        span{
+                            color:#2879fe ;
+                        }
+                    }
+                    .desc{
+                            font-size: 16px;
+                                color: gray;
+                                font-weight: 400;
+                    }
+                    .total{
+                        color:#2879fe;
+                        font-size: 17px;
+                        font-weight: bold;
+                        span{
+                            color: gray;
+                        }
+                    }
+                }
+            }
+    }
+}

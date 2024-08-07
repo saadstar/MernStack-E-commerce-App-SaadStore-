@@ -7,6 +7,7 @@ import { NavBar } from "./components/NavBar/NavBar";
 import { Footer } from "./components/Footer/Footer";
 import { SignUp } from "./components/SignUp/SignUp";
 import { SignIn } from "./components/Signin/SignIn";
+import { Order } from './components/Order/Order';
 
 function App() {
   const Layout = () => {
@@ -46,6 +47,10 @@ function App() {
         {
           path: "/login",
           element: <SignIn/>,
+        },
+        {
+          path: "/order",
+          element: <Order/>
         },
       ],
     },

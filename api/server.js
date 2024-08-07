@@ -5,11 +5,12 @@ const connectDB = require("./config/dbConnect");
 const authRoute = require("./routes/auth");
 const productsRoute = require("./routes/products");
 const stripeRoute = require("./routes/stripe");
+const orderRoutes = require("./routes/orderRoute");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
 
-const PORT =  process.env.PORT || 3500;
+const PORT = 3500 || process.env.PORT;
 connectDB();
 
 app.use(express.json());
@@ -18,6 +19,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoute);
 app.use("/api/products", productsRoute);
 app.use("/api/payment", stripeRoute);
+app.use("/api/orders", orderRoutes);
 
 
 app.listen(PORT,() => {

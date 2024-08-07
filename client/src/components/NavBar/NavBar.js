@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import { Link, useNavigate } from 'react-router-dom';
 import "./navbar.scss";
 import { Cart } from '../Cart/Cart';
@@ -118,13 +119,13 @@ export const NavBar = () => {
           <div className="icons">
             <SearchIcon />
             {user ? (
-              <LogoutIcon onClick={ logoutHandler} />
+              <LogoutIcon onClick={logoutHandler} />
             ) : (
               <PersonOutlineOutlinedIcon
                 onClick={() => setAccountOpen(!accountOpen)}
               />
             )}
-            <div className='cartIcon' onClick={()=>setWishOpen(!wishOpen)}>
+            <div className="cartIcon" onClick={() => setWishOpen(!wishOpen)}>
               <FavoriteBorderOutlinedIcon />
               <span>{wishlists.length}</span>
             </div>
@@ -132,6 +133,9 @@ export const NavBar = () => {
               <ShoppingCartOutlinedIcon />
               <span>{carts.length}</span>
             </div>
+            <Link className="cartIcon" style={{ color: "#777 !important" }} to="/order">
+              <LocalShippingIcon />
+            </Link>
           </div>
         </div>
       </div>
